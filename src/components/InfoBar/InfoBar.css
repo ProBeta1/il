@@ -2,9 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #2979FF;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);;
     border-radius: 4px 4px 0 0;
-    height: 60px;
+    height: 55px;
     width: 100%;
   }
   
@@ -25,4 +25,8 @@
   
   .onlineIcon {
     margin-right: 5%;
+  }
+
+  .room {
+    margin :10px;
   }

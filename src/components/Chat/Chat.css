@@ -3,17 +3,28 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #1A1A1D;
-  }
+    background-color: #4158D0;
+    background-image: linear-gradient(73deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    }
   
   .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: #FFFFFF;
+    background: linear-gradient(50deg, #0700b8 1%, #00ff88 90%);;
     border-radius: 8px;
-    height: 60%;
-    width: 35%;
+    height: 90%;
+    width: 50%;
+  }
+
+  .canvas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #191a19;
+    border-radius: 8px;
+    height: 90%;
+    width: 45%;
   }
   
   @media (min-width: 320px) and (max-width: 480px) {
@@ -29,6 +40,19 @@
   
   @media (min-width: 480px) and (max-width: 1200px) {
     .container {
-      width: 60%;
+      width: 50%;
+    }
+    .canvas {
+      width:45%;
     }
   }
+
+  .undo {
+    color: white;
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+  }
+
+  .btn-grad {
+    color:white;
+    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%)}
+  .btn-grad:hover { background-position: right center; }

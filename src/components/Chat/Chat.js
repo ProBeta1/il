@@ -6,6 +6,8 @@ import "./Chat.css";
 import InfoBar from "../InfoBar/InfoBar";
 import Input from "../Input/Input";
 import Messages from "../Messages/Messages";
+import CanvasDraw from "react-canvas-draw";
+
 
 let socket;
 
@@ -15,6 +17,7 @@ const Chat = ({ location }) => {
     const [room, setRoom] = useState('');
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState('');
+    const [saveableCanvas, setSaveableCanvas] = useState('');
 
     const ENDPOINT = 'https://interview-lelo.herokuapp.com/';
 
@@ -54,14 +57,37 @@ const Chat = ({ location }) => {
         }
     }
 
-    console.log(message, messages);
-
     return (
         <div className="outerContainer">
             <div className="container">
                 <InfoBar room={room} />
                 <Messages messages={messages} name={name} />
                 <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
+            </div>
+            <div className="canvas">
+                <button
+                    onClick={() => {
+                        saveableCanvas.undo();
+                    }}
+                    className="undo"
+                >
+                    <h3>Undo</h3>
+                </button>
+                <CanvasDraw
+                    canvasWidth="100%"
+                    canvasHeight="100%"
+                    ref={canvasDraw => (setSaveableCanvas(canvasDraw))}
+                    lazyRadius={10}
+                    brushRadius={5}
+                />
+                <button
+                    onClick={() => {
+                        saveableCanvas.clear();
+                    }}
+                    className="btn-grad"
+                >
+                    <h3>Clear</h3>
+                </button>
             </div>
 
         </div>
