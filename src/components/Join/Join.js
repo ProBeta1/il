@@ -13,7 +13,7 @@ const Join = () => {
         <div className="joinOuterContainer">
             <div className="joinInnerContainer">
                 <div>
-                    <img className="twice" src={twice} />
+                    <img className="twice" src={twice} alt="twice" />
                 </div>
                 <h1 className="heading">Let's start the interview</h1>
                 <div><input placeholder="Your Name" className="joinInput" type="text" onChange={(e) => setName(e.target.value)} /> </div>
