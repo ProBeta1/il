@@ -82,3 +82,8 @@ html, body {
   button:focus {
     outline: 0;
   }
+
+  .footer {
+    color:white;
+    display: flex;
+  }

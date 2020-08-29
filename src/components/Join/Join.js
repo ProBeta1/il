@@ -21,6 +21,7 @@ const Join = () => {
                 <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
                     <button className="button mt-29" type="submit" >Begin</button>
                 </Link>
+                <h4 className="footer">Copyright © 2020 Abhinav. All Rights Reserved</h4>
 
             </div>
         </div>
