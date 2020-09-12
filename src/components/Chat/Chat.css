@@ -12,9 +12,9 @@
     flex-direction: column;
     justify-content: space-between;
     background: linear-gradient(50deg, #0700b8 1%, #00ff88 90%);;
-    border-radius: 8px;
+    border-radius: 20px;
     height: 90%;
-    width: 50%;
+    width: 30%;
   }
 
   .canvas {
@@ -25,7 +25,26 @@
     border-radius: 8px;
     height: 90%;
     margin-left: 10px;
-    width: 45%;
+    width: 65%;
+  }
+
+  .slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    height: 80%;
+  }
+
+  .picker {
+    height: 30%;
+    margin-left: 50%;
+  }
+
+  .slider {
+    margin-top:50%;
+    height:40%;
   }
   
   @media (min-width: 320px) and (max-width: 480px) {
@@ -41,19 +60,23 @@
   
   @media (min-width: 480px) and (max-width: 1200px) {
     .container {
-      width: 50%;
+      width: 30%;
     }
     .canvas {
       width:45%;
     }
   }
 
-  .undo {
-    color: white;
-    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+  @media (max-width: 480px)  {
+    .container {
+      width: 80%;
+    }
+    .canvas {
+      width:0%;
+    }
   }
-
-  .btn-grad {
-    color:white;
-    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%)}
-  .btn-grad:hover { background-position: right center; }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30%;
+  }
